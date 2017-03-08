@@ -46,8 +46,8 @@ Find those `TODO` items in the code, and tackle one of them.
    - you are on a branch with you and your partner's namesake.
    - you are currently within the starter-code directory.
 
-1. Type `atom .` to open this starter-code folder as a project in Atom.
-1. Use the Atom "Find in Project" (command shift "f" if on a Mac) to locate all the `TODO:` items.
+1. Type `atom .` to open this starter-code folder as a project in VS Code.
+1. Use the VS Code "Find in Project" (command shift "f" if on a Mac) to locate all the `TODO:` items.
 1. Work through one or two TODO items before switching roles (or one hour, whichever arrives first), testing your code as you go.
 1. In your terminal type `git status` to view the files that you have changed. You should only see the files that you have worked on.
 2. Type `git diff` to see line-item changes with your down arrow key. (Type `q` to exit this mode!)
@@ -71,7 +71,7 @@ Find those `TODO` items in the code, and tackle one of them.
 8. The new driver (original navigator):
   1. `git clone` the repo your patner Slacked you into your navigator folder.
   2. if needed, `git fetch origin` branch-name
-  2. Now open the starter-code in Atom. It's your turn to have the hands on the keyboard!
+  2. Now open the starter-code in VS Code. It's your turn to have the hands on the keyboard!
 
 ## Submit your assignment
 
