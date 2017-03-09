@@ -66,37 +66,35 @@ articleView.handleCategoryFilter = function () {
 };
 
 articleView.handleMainNav = function () {
-  $('.main-nav').on('click', '.tab', function (event) {
+  $('.main-nav').on('click', '.tab', function () {
     /* TODO:
       1. Hide all of the .tab-content sections
       2. Fade in the single .tab-content section that is
         associated with the .tab element's data-content attribute.
     */
     $('.tab-content').hide('fast');
-    var clickedId = $(event.target).attr('data-content');
+    var clickedId = $(this).attr('data-content');
     $('#' + clickedId).fadeIn('slow');
   });
   $('.main-nav .tab:first').click();
 };
 
-// articleView.setTeasers = function () {
-//   // Truncate logic to show only first two elements within the article body.
-//   $('.article-body *:nth-of-type(n+2)').hide();
-//   // TODO: Add a delegated event handler to reveal the remaining paragraphs.
-//   //   When a .read-on link is clicked, we can:
-//   $('.read-on').on('click', function () {
-//     // 1. Prevent the default action of a link.
-//     event.preventDefault();
-//     // 2. Reveal everything in that particular article now.
+articleView.setTeasers = function () {
+  // Truncate logic to show only first two elements within the article body.
+  $('.article-body *:nth-of-type(n+2)').hide();
+  // TODO: Add a delegated event handler to reveal the remaining paragraphs.
+  //   When a .read-on link is clicked, we can:
+  $('.read-on').on('click', function () {
+    // 1. Prevent the default action of a link.
+    event.preventDefault();
+    // 2. Reveal everything in that particular article now.
+    $(this).fadeIn('.article-body');
+    // 3. Hide that read-on link!
+    $('.read-on').hide();
 
-//     // 3. Hide that read-on link!
-
-//   });
-
-
-
+  });
     // STRETCH GOAl!: change the 'Read On' link to 'Show Less'
-// };
+};
 
 // TODO: Invoke all of the above functions (I mean, methods!):
 articleView.populateFilters();
