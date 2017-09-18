@@ -88,12 +88,17 @@ articleView.setTeasers = function () {
     // 1. Prevent the default action of a link.
     event.preventDefault();
     // 2. Reveal everything in that particular article now.
-    $(this).siblings('.article-body').children().css('display','block');
+    $(this).parent().find('*').fadeIn('slow');
     // 3. Hide that read-on link!
-    $('.read-on').hide();
-
+    $(this).hide();
+    $('.show-less', this).show();
   });
-    // STRETCH GOAl!: change the 'Read On' link to 'Show Less'
+  $('.show-less').on('click', function() {
+    event.preventDefault();
+    $(this).siblings('*').children('*:nth-of-type(n+2)').fadeOut('slow');
+    $(this).hide();
+    $('.read-on').show();
+  });
 };
 
 // DONE: Invoke all of the above functions (I mean, methods!):
